@@ -1,0 +1,169 @@
+
+ .me-message{
+   background: #559eb1;
+   padding :10px 15px;
+   border-radius :  20px;
+   margin :0 2% 1% 0;
+   text-align : right;
+   display: inline-block;
+   float: right;
+   max-width: 50%;
+  }
+
+.name-sender{
+   text-align: left;
+   margin:0 0 0 2%;
+   color: grey;
+}
+
+.your-message{
+background: #c4c4ca;
+padding :10px 15px;
+border-radius :  20px;
+margin :5px 0 1% 2%;
+text-align : left;
+display: inline-block;
+max-width: 50%;
+color:black
+}
+
+.new-person{
+   text-align: center;
+   color: gray;
+   padding-top: 5px;
+}
+  
+.user-chat{
+   border-bottom: 1px solid #96bfc9;
+   padding: 10% 0 0 0;
+   font-size:100%;
+   margin-left: 10%;
+   margin-right: 10%;
+   text-align: center;
+}
+
+.user-chat:hover{
+   background-color: #79b6c5;
+}
+
+.chat{
+   height: 90%;
+   width: 100%;
+}
+.chat-global{
+   height: 100%;
+   width: 100%;
+}
+
+.chat-messages-show-list {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+
+ .chat-persons-show-list {
+   list-style-type:none;
+   width: 100%;
+   margin: 0;
+   padding: 0;
+ }
+
+.chat-messages-show{
+   height:90%;
+   width: 100%;
+   background-image: url("pozadina.jpg");
+   border: none;
+   display: flex;
+   flex-direction: column;
+   overflow: auto;
+}
+
+.chat-messages-create{
+   background:  #d7e0e7;
+   height: 15%;
+   display: flex;
+   justify-content: center;
+   padding-top: 1%;
+   
+}
+.chat-messages-create-input {
+    border-radius :  20px;
+    padding: 1%;
+    margin-left:3% ;
+    margin-top:1% ;
+    height: 10%;
+    width: 90%;
+    min-height: 20px;
+ }
+
+ .chat-messages-create-button {
+   padding: 1%;
+   margin-right:3% ;
+   margin-left:3% ;
+   margin-bottom:1% ;
+   height: 50%;
+   width: 4%;
+   min-height: 10px;
+   min-width: 10px;
+ }
+
+
+ .example-container {
+   width: 100%;
+   height: 100%;
+   border: 3px solid rgba(0, 0, 0, 2);
+   background-color: #f3efef;
+   background-image: url("pozadina.jpg");
+ }
+
+ .global-chat-button{
+    text-align: center;
+    border: none;
+    background-color: #d7e0e7; 
+    color: rgb(71, 70, 70);
+    border-radius: 5px;
+    width: 90%;
+    height: 35px;
+    margin: 0 0 3% 5%;
+ }
+
+ .global-chat-button:hover {
+   background-color: #bcc4ca;
+ }
+
+
+.example-sidenav {
+   padding: 1%;
+   background-color: #61a5b6;
+   width: 20%;
+}
+
+.button-persons{
+   background:  #61a5b6;
+   border-bottom-right-radius: 10px;
+}
+
+@media only screen and (max-width: 1024px) {
+   .chat-messages-create-button {
+      height: 50px;
+      width: 50px;
+    }
+ }
+
+@media only screen and (max-width: 600px) {
+   .chat-messages-create-button {
+      height: 30px;
+      width: 30px;
+    }
+
+    .example-sidenav {
+      width: 40%;
+    }
+
+    .global-chat{
+      height: 20px;
+    }
+  
+ }
+
+

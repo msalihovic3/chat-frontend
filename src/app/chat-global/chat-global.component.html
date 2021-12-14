@@ -1,0 +1,39 @@
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h2>People in chat</h2>
+    <div>
+      <button class="global-chat-button" (click)="openGlobalChat()"><a>Global chat</a></button>
+    </div>
+    <ul id="persons-list" class="chat-persons-show-list" *ngFor="let user of users">
+      <li id='{{user.username}}' class="user-chat" (click)="openPrivate(user.username)">{{ user.username}}
+      </li>
+    </ul>
+  </mat-drawer>
+  <button id="chat" class="button-persons" type="button" mat-button (click)="drawer.toggle()">
+    <mat-icon>more_vert</mat-icon>
+    Open/Close
+  </button>
+  <div class="chat">
+    <div class="chat-global">
+      <div class="chat-messages-show" #scrollMe>
+        <ul id="chat-list" class="chat-messages-show-list" *ngFor="let message of messages">
+          <p class="name-sender" *ngIf="message.username!='No element p' ">{{message.username}}</p>
+          <li id='{{message.text}}' [ngClass]="{
+            'new-person': message.sender==='X',
+            'me-message':message.sender === 'Yes',
+            'your-message':message.sender === 'No'  
+          }"> 
+          {{ message.text }}
+          </li>
+          <div clear="both"></div>
+        </ul>
+      </div>
+      <div class="chat-messages-create">
+        <input class="chat-messages-create-input" type="text" placeholder="Type a message..." [(ngModel)]="message"
+          (click)="startTyping()" (keyup.enter)="sendMessage()">
+        <input class="chat-messages-create-button" type="image" id="image" alt="Login" src="button.jpg"
+          (click)="sendMessage()">
+      </div>
+    </div>
+  </div>
+</mat-drawer-container>
