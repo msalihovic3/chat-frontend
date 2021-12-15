@@ -1,5 +1,6 @@
 <mat-drawer-container class="example-container" autosize>
   <mat-drawer #drawer class="example-sidenav" mode="side">
+    <h2>Me: {{username}}</h2>
     <h2>People in chat</h2>
     <div>
       <button class="global-chat-button" (click)="openGlobalChat()"><a>Global chat</a></button>
@@ -33,6 +34,7 @@
           (click)="startTyping()" (keyup.enter)="sendMessage()">
         <input class="chat-messages-create-button" type="image" id="image" alt="Login" src="button.jpg"
           (click)="sendMessage()">
+        
       </div>
     </div>
   </div>

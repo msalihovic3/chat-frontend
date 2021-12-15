@@ -99,7 +99,7 @@ export class ChatGlobalComponent implements OnInit {
     })
   
     this.socket.on('disconnesctUser',(user)=>{
-      document.getElementById(user.username).style.color="gray"; 
+      document.getElementById(user.username).remove(); 
       this.messages.push({username:"No element p", text:user.username+" left the chat", sender:"X"});
     });
   }
