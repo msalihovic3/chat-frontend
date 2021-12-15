@@ -119,24 +119,26 @@ export class ChatGlobalComponent implements OnInit {
   }
 
   sendMessage() { 
-    var message={
-      message: this.message,
-      username: this.username,
-      userTo:null,
-      type:"global"
-    }
+    if(this.message!=null){
+      var message={
+        message: this.message,
+        username: this.username,
+        userTo:null,
+        type:"global"
+      }
 
-    if(this.privateTo!=null && this.privateChat==true){  
-      //ako se salje privatna poruka potrebno je poslati i ID kome saljemo
-      message.type="private"
-      message.userTo=this.privateTo.userID
-      this.socket.emit('message-private', message);
-    }else if(this.privateChat==false){
-      this.socket.emit('message', message);
-    }
+      if(this.privateTo!=null && this.privateChat==true){  
+        //ako se salje privatna poruka potrebno je poslati i ID kome saljemo
+        message.type="private"
+        message.userTo=this.privateTo.userID
+        this.socket.emit('message-private', message);
+      }else if(this.privateChat==false){
+        this.socket.emit('message', message);
+      }
 
-    this.messages.push({username:"No element p", text:this.message, sender:"Yes"})  
-    this.message = '';
+      this.messages.push({username:"No element p", text:this.message, sender:"Yes"})  
+      this.message = '';
+    }
   }
 
   startTyping() { 
