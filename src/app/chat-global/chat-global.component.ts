@@ -119,7 +119,8 @@ export class ChatGlobalComponent implements OnInit {
   }
 
   sendMessage() { 
-    if(this.message!=null){
+    console.log(this.message)
+    if(this.message!=null && this.message!=="" ){
       var message={
         message: this.message,
         username: this.username,
