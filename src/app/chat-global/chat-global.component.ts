@@ -3,7 +3,7 @@ import {io} from 'socket.io-client';
 import {  ActivatedRoute, Router } from '@angular/router';
 
 const SOCKET_ENDPOINT = 'https://test-app1y.herokuapp.com/';
-
+//const SOCKET_ENDPOINT = 'localhost:3000'
 @Component({
   selector: 'app-chat-global',
   templateUrl: './chat-global.component.html',
@@ -87,7 +87,7 @@ export class ChatGlobalComponent implements OnInit {
     })
 
     this.socket.on("history-messages",(messages)=>{    
-      if(messages.id===this.userID){
+      if(messages.id===this.userID || messages.id===""){
         messages.messages.forEach((data) => {
           if(data.user===this.username){
             this.messages.push({username:"No element p", text:data.text, sender:"Yes"})
