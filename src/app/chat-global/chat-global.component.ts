@@ -2,7 +2,7 @@ import { Component, OnInit,ElementRef, ViewChild } from '@angular/core';
 import {io} from 'socket.io-client';
 import {  ActivatedRoute, Router } from '@angular/router';
 
-const SOCKET_ENDPOINT = 'https://test-app1y.herokuapp.com/';
+const SOCKET_ENDPOINT = 'https://chat-mess1.herokuapp.com/';
 //const SOCKET_ENDPOINT = 'localhost:3000'
 @Component({
   selector: 'app-chat-global',
